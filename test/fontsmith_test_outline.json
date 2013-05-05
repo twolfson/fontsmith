@@ -1,0 +1,8 @@
+{
+  "An array of SVGs": {
+    "rendered with fontsmith": {
+      "generates some fonts": true,
+      "generates an mapping from files to unicode characters": true
+    }
+  }
+}
