@@ -17,6 +17,7 @@ module.exports = {
         that = this;
     this.timeout(60000);
     fontsmith(params, function (err, results) {
+      console.error(err);
       // Save the results for later and callback
       that.results = results;
       done(err);
