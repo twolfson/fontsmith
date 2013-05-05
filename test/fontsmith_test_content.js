@@ -17,7 +17,7 @@ module.exports = {
     fontsmith(params, function (err, results) {
       // Save the results for later and callback
       that.results = results;
-      cb(err);
+      done(err);
     });
   },
   "generates some fonts": function () {
