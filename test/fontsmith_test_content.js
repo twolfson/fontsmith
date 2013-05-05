@@ -13,6 +13,7 @@ module.exports = {
     // Render with fontsmith
     var params = {src: this.files},
         that = this;
+    this.timeout(60000);
     fontsmith(params, function (err, results) {
       // Save the results for later and callback
       that.results = results;
