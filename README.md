@@ -2,21 +2,54 @@
 
 Collect SVGs into multiple fonts and a character code mapping
 
-TODO: Go over dependencies
-
 ## Getting Started
 Install the module with: `npm install fontsmith`
 
 ```javascript
 var fontsmith = require('fontsmith');
-fontsmith.awesome(); // "awesome"
+fontsmith({src: ['paths', 'to', 'svgs']}, function (err, res) {
+  res.map; // Map of file name to unicode value for character
+  res.fonts; // Object containing namespaced binary string representations of fonts depending on options (e.g. {svg, ttf, woff, eot})
+});
 ```
 
+## Dependencies
+Currently, there is only the [icomoon-phantomjs][icomoon-phantomjs] engine.
+
+[icomoon-phantomjs]:
+
+### icomoon-phantomjs
+This requires installing [phantomjs][phantomjs] and having it accessible from your path (i.e. `phantomjs --version` will work).
+
+[phantomjs]:
+
 ## Documentation
-_(Coming soon)_
+`fontsmith` provides a single function as its export.
+```js
+/**
+ * Function which eats SVGs and outputs fonts and a mapping from file names to unicode values
+ * @param {Object} params Object containing all parameters for fontsmith
+ * @param {String[]} params.src Array of paths to SVGs to compile
+ * @param {Function} cb Error-first function to callback with composition results
+ */
+```
 
 ## Examples
-_(Coming soon)_
+Below is taken from the `test` folder
+
+```js
+var files = [
+      'test_files/eye.svg',
+      'test_files/moon.svg',
+      'test_files/building_block.svg'
+    ],
+    params = {src: this.files};
+fontsmith(params, function (err, res) {
+  err; // Any errors that might have popped up
+  res.map; // Map of file name to unicode value for character
+  res.fonts; // Object containing namespaced binary string representations of fonts depending on options (e.g. {svg, ttf, woff, eot})
+});
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint using [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
