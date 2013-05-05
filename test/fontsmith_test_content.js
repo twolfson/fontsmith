@@ -49,8 +49,8 @@ module.exports = {
   "generates an mapping from files to unicode characters": function () {
     var map = this.results.map;
     // DEV: Hex equivalent of 'e000'
-    assert.strictEqual(map.building_block, 57344);
-    assert.strictEqual(map.moon, 57345);
-    assert.strictEqual(map.eye, 57346);
+    assert(map.building_block >= 57344);
+    assert(map.moon >= 57344);
+    assert(map.eye >= 57344);
   }
 };
