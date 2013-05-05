@@ -29,15 +29,14 @@
     "test": "doubleshot"
   },
   "dependencies": {
-    "async": "~0.2.8"
+    "async": "~0.2.8",
+    "icomoon-phantomjs": "~0.2.2"
   },
   "devDependencies": {
     "grunt": "~0.3.17",
     "doubleshot": "~1.0.2"
   },
-  "optionalDependencies": {
-    "icomoon-phantomjs": "~0.2.2"
-  },
+  "optionalDependencies": {},
   "keywords": [
     "fontsmith",
     "font",
