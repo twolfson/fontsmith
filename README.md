@@ -9,7 +9,7 @@ Install the module with: `npm install fontsmith`
 var fontsmith = require('fontsmith');
 fontsmith({src: ['paths', 'to', 'svgs']}, function (err, res) {
   res.map; // Map of file name to unicode value for character
-  res.fonts; // Object containing namespaced binary string representations of fonts depending on options (e.g. {svg, ttf, woff, eot})
+  res.fonts; // Object containing binary string representations of fonts (e.g. {svg, ttf, woff, eot})
 });
 ```
 
@@ -47,7 +47,7 @@ var files = [
 fontsmith(params, function (err, res) {
   err; // Any errors that might have popped up
   res.map; // Map of file name to unicode value for character
-  res.fonts; // Object containing namespaced binary string representations of fonts depending on options (e.g. {svg, ttf, woff, eot})
+  res.fonts; // Object containing binary string representations of fonts (e.g. {svg, ttf, woff, eot})
 });
 ```
 
