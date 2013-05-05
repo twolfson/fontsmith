@@ -22,20 +22,26 @@ module.exports = {
     });
   },
   "generates some fonts": function () {
-    // DEV: Write out fonts to files
     var fonts = this.results.fonts;
-    if (true) {
+
+    // DEV: Write out fonts to files
+    // if (true) {
+    if (false) {
       try { fs.mkdirSync(__dirname + '/actual_files'); } catch (e) {}
       fs.writeFileSync(__dirname + '/actual_files/font.svg', fonts.svg, 'binary');
       fs.writeFileSync(__dirname + '/actual_files/font.ttf', fonts.ttf, 'binary');
-      fs.writeFileSync(__dirname + '/actual_files/font.otf', fonts.otf, 'binary');
       fs.writeFileSync(__dirname + '/actual_files/font.woff', fonts.woff, 'binary');
       fs.writeFileSync(__dirname + '/actual_files/font.eot', fonts.eot, 'binary');
       fs.writeFileSync(__dirname + '/actual_files/font.dev.svg', fonts['dev-svg'], 'binary');
     }
 
-    // TODO: Assert against expected_files
-    // console.log(fonts);
+    // ANTI-PATTERN: Using a forEach for distinguishable items -- losing sense of the context/stackTrace
+    ['svg', 'eot', 'ttf', 'woff'].forEach(function (ext) {
+      var filepath = __dirname + '/expected_files/font.' + ext,
+          actualContent = fonts[ext],
+          expectedContent = fs.readFileSync(filepath, 'binary');
+      assert.strictEqual(actualContent, expectedContent);
+    });
   },
   "generates an mapping from files to unicode characters": function () {
     var map = this.results.map;
