@@ -37,7 +37,8 @@
   },
   "devDependencies": {
     "grunt": "~0.3.17",
-    "doubleshot": "~1.0.2"
+    "doubleshot": "~1.0.2",
+    "underscore.string": "~2.3.1"
   },
   "optionalDependencies": {},
   "keywords": [
