@@ -16,12 +16,12 @@ fontsmith({src: ['paths', 'to', 'svgs']}, function (err, res) {
 ## Dependencies
 Currently, there is only the [icomoon-phantomjs][icomoon-phantomjs] engine.
 
-[icomoon-phantomjs]:
+[icomoon-phantomjs]: https://github.com/twolfson/icomoon-phantomjs
 
 ### icomoon-phantomjs
 This requires installing [phantomjs][phantomjs] and having it accessible from your path (i.e. `phantomjs --version` will work).
 
-[phantomjs]:
+[phantomjs]: http://www.phantomjs.org/
 
 ## Documentation
 `fontsmith` provides a single function as its export.
