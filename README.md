@@ -1,4 +1,4 @@
-# fontsmith
+# fontsmith [![Donate on Gittip](http://badgr.co/gittip/twolfson.png)](https://www.gittip.com/twolfson/)
 
 Collect SVGs into multiple fonts and a character code mapping
 
