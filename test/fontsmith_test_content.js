@@ -33,14 +33,19 @@ module.exports = {
     fs.writeFileSync(__dirname + '/actual_files/font.eot', fonts.eot, 'binary');
     fs.writeFileSync(__dirname + '/actual_files/font.dev.svg', fonts['dev-svg'], 'binary');
 
+    // Assert SVG separately from binary content
+    var ext = 'svg',
+        filepath = __dirname + '/expected_files/font.' + ext,
+        actualContent = fonts[ext],
+        expectedContent = fs.readFileSync(filepath, 'binary'),
+        bitDiff = _s.levenshtein(actualContent, expectedContent),
+        isPassing = bitDiff < 50;
+    assert(isPassing, 'Font "' + ext + '" is ' + bitDiff + ' different from expected');
+
     // ANTI-PATTERN: Using a forEach for distinguishable items -- losing sense of the context/stackTrace
-    ['svg', 'eot', 'ttf', 'woff'].forEach(function (ext) {
-      var filepath = __dirname + '/expected_files/font.' + ext,
-          actualContent = fonts[ext],
-          expectedContent = fs.readFileSync(filepath, 'binary'),
-          bitDiff = _s.levenshtein(actualContent, expectedContent),
-          isPassing = bitDiff < 50;
-      assert(isPassing, 'Font "' + ext + '" is ' + bitDiff + ' different from expected');
+    ['eot', 'ttf', 'woff'].forEach(function (ext) {
+      var actualContent = fonts[ext];
+      assert(actualContent, 'Expected font "' + ext + '" to not be empty');
     });
   },
   "generates an mapping from files to unicode characters": function () {
