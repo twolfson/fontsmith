@@ -1,4 +1,4 @@
-# fontsmith
+# fontsmith [![Build status](https://travis-ci.org/twolfson/fontsmith.png?branch=master)](https://travis-ci.org/twolfson/fontsmith)
 
 Collect SVGs into multiple fonts and a character code mapping
 
