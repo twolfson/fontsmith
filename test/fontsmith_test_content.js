@@ -26,15 +26,12 @@ module.exports = {
     var fonts = this.results.fonts;
 
     // DEV: Write out fonts to files
-    // if (true) {
-    if (false) {
-      try { fs.mkdirSync(__dirname + '/actual_files'); } catch (e) {}
-      fs.writeFileSync(__dirname + '/actual_files/font.svg', fonts.svg, 'binary');
-      fs.writeFileSync(__dirname + '/actual_files/font.ttf', fonts.ttf, 'binary');
-      fs.writeFileSync(__dirname + '/actual_files/font.woff', fonts.woff, 'binary');
-      fs.writeFileSync(__dirname + '/actual_files/font.eot', fonts.eot, 'binary');
-      fs.writeFileSync(__dirname + '/actual_files/font.dev.svg', fonts['dev-svg'], 'binary');
-    }
+    try { fs.mkdirSync(__dirname + '/actual_files'); } catch (e) {}
+    fs.writeFileSync(__dirname + '/actual_files/font.svg', fonts.svg, 'binary');
+    fs.writeFileSync(__dirname + '/actual_files/font.ttf', fonts.ttf, 'binary');
+    fs.writeFileSync(__dirname + '/actual_files/font.woff', fonts.woff, 'binary');
+    fs.writeFileSync(__dirname + '/actual_files/font.eot', fonts.eot, 'binary');
+    fs.writeFileSync(__dirname + '/actual_files/font.dev.svg', fonts['dev-svg'], 'binary');
 
     // ANTI-PATTERN: Using a forEach for distinguishable items -- losing sense of the context/stackTrace
     ['svg', 'eot', 'ttf', 'woff'].forEach(function (ext) {
