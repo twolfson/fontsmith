@@ -1,4 +1,6 @@
 # fontsmith
+0.2.5 - Fixed up tests and added Travis CI
+
 0.2.4 - Added filtering for OSX + PhantomJS 1.9.2 error messages. Fixes twolfson/grunt-fontsmith#10
 
 0.2.3 - Removed badgr.co badge
