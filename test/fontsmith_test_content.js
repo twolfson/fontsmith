@@ -11,6 +11,14 @@ module.exports = {
       __dirname + '/test_files/building_block.svg'
     ];
   },
+  "An empty array of SVGs": function () {
+    this.files = [];
+  },
+  "An bad array of SVGs": function () {
+    this.files = [
+      __dirname + '/test_files/doesnotexist.svg'
+    ];
+  },
   "rendered with fontsmith": function (done) {
     // Render with fontsmith
     var params = {src: this.files},
@@ -19,8 +27,12 @@ module.exports = {
     fontsmith(params, function (err, results) {
       // Save the results for later and callback
       that.results = results;
-      done(err);
+      that.err = err;
+      done();
     });
+  },
+  "had no errors": function () {
+    assert.strictEqual(this.err, null);
   },
   "generates some fonts": function () {
     var fonts = this.results.fonts;
