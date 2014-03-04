@@ -1,5 +1,7 @@
 # fontsmith
-0.3.0 - Upgraded `icomoon-phantomjs` to get timeout handlers
+0.4.0 - Upgraded to `icomoon-phantomjs@0.4.0` to get debug screenshot and better failed upload messaging
+
+0.3.0 - Upgraded to `icomoon-phantomjs@0.3.0` to get timeout handlers
 
 0.2.5 - Fixed up tests and added Travis CI
 
