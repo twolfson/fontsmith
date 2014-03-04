@@ -1,4 +1,6 @@
 # fontsmith
+0.5.0 - Added fail faster check for when no files are provided
+
 0.4.0 - Upgraded to `icomoon-phantomjs@0.4.0` to get debug screenshot and better failed upload messaging
 
 0.3.0 - Upgraded to `icomoon-phantomjs@0.3.0` to get timeout handlers
