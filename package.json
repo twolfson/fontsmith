@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "async": "~0.2.8",
-    "icomoon-phantomjs": "~0.2.4",
+    "icomoon-phantomjs": "~0.3.1",
     "temporary": "0.0.5",
     "request": "~2.21.0",
     "node-zip": "~1.0.1"
