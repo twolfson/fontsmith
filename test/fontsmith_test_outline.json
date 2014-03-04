@@ -1,18 +1,13 @@
 [{
   "An array of SVGs": [{
     "rendered with fontsmith": [
+      "had no errors",
       "generates some fonts",
       "generates an mapping from files to unicode characters"
     ]
   }]
 }, {
   "An empty array of SVGs": [{
-    "rendered with fontsmith": [
-      "notifies the user that there we no fonts found"
-    ]
-  }]
-}, {
-  "An bad array of SVGs": [{
     "rendered with fontsmith": [
       "notifies the user that there we no fonts found"
     ]

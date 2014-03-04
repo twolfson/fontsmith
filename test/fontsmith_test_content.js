@@ -14,11 +14,6 @@ module.exports = {
   "An empty array of SVGs": function () {
     this.files = [];
   },
-  "An bad array of SVGs": function () {
-    this.files = [
-      __dirname + '/test_files/doesnotexist.svg'
-    ];
-  },
   "rendered with fontsmith": function (done) {
     // Render with fontsmith
     var params = {src: this.files},
