@@ -66,5 +66,8 @@ module.exports = {
     assert(map.building_block >= 57344);
     assert(map.moon >= 57344);
     assert(map.eye >= 57344);
+  },
+  "notifies the user that there we no fonts found": function () {
+    assert(this.err.message.match('No files were provided'));
   }
 };
