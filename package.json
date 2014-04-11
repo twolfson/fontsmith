@@ -33,7 +33,8 @@
     "icomoon-phantomjs": "~0.4.0",
     "temporary": "0.0.5",
     "request": "~2.21.0",
-    "node-zip": "~1.0.1"
+    "node-zip": "~1.0.1",
+    "shell-quote": "~1.4.1"
   },
   "devDependencies": {
     "grunt": "~0.3.17",
