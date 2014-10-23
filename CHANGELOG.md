@@ -1,4 +1,6 @@
 # fontsmith
+0.6.2 - Added fix for Travis CI tests
+
 0.6.1 - Added hotfix for SSL issues between PhantomJS and icomoon. Fixed by @mharmuth in #9
 
 0.6.0 - Fixed handling of spaces in `icomoon-phantomjs` invocation. Fixed by @dineshduggal in #8
