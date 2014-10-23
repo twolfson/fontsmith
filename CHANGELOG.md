@@ -1,4 +1,6 @@
 # fontsmith
+0.6.1 - Added hotfix for SSL issues between PhantomJS and icomoon. Fixed by @mharmuth in #9
+
 0.6.0 - Fixed handling of spaces in `icomoon-phantomjs` invocation. Fixed by @dineshduggal in #8
 
 0.5.0 - Added fail faster check for when no files are provided
