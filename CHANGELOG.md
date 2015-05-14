@@ -1,4 +1,6 @@
 # fontsmith
+0.8.1 - Added deprecation notice
+
 0.8.0 - Added support for `params.exportOptions`
 
 0.7.0 - Upgraded to `temporary@0.0.8` via @tnajdek in #10
